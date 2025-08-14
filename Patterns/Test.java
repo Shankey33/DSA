@@ -1,4 +1,4 @@
-class Test{
+class Test {
 
     public static void p1(int n){
         for(int i = 1; i<=n; i++){
@@ -30,7 +30,7 @@ class Test{
     public static void p4(int n){
         for(int i = 1; i <= n; i++){
             for(int j = 1; j <= i; j++){
-                System.out.print(j + " ");
+                System.out.print(i + " ");
             }
             System.out.println();
         }
@@ -103,17 +103,59 @@ class Test{
     }
 
     public static void p9(int n){
-        for(int i = 0; i < 5; i++){
-            for(int j = 0; j < i; j++){
-                System.out.print("* ");
+        int space = n-1;
+
+        for(int i = 1; i <= n; i++){
+
+            //Space
+            for(int j1 = 1; j1 <= space; j1++){
+                System.out.print(" ");
+            }
+
+            //Alphabet
+            for(int j2 = 1; j2 <= (2 * i )-1; j2++){
+                System.out.print("*");
+            }
+
+            //Space
+            for(int j3 = 1; j3 <= space; j3++){
+                System.out.print(" ");
+            }
+
+            space--;
+            System.out.println();
+        }
+
+        for (int i = 1; i <= n-1; i++){
+            //for space
+            for(int j = 1; j<= (i-1); j++){
+                System.out.print(" ");
+            }
+
+            //for star
+            for(int star = 1; star <= (2*n - 2*i); star++){
+                System.out.print("*");
+            }
+            
+
+            //for space
+            for(int j = 1; j<= (i-1); j++){
+                System.out.print(" ");
             }
             System.out.println();
         }
     }
 
     public static void p10(int n){
-        for(int i = 5; i > 0; i--){
-            for(int j = i; j > 0; j--){
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= i; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j<= (n+1 - i); j++){
                 System.out.print("* ");
             }
             System.out.println();
@@ -375,7 +417,6 @@ class Test{
 
 
     public static void main(String[] args) {
-        
         System.out.println("Pattern 1:");
         p1(5);
         System.out.println();
@@ -441,7 +482,7 @@ class Test{
         System.out.println();
         System.out.println();
         System.out.println("Pattern 17:");
-        p17(5);
+        p17(4);
         System.out.println();
         System.out.println();
         System.out.println("Pattern 18:");
@@ -461,11 +502,8 @@ class Test{
         System.out.println();
         System.out.println();
         System.out.println("Pattern 22:");
-        p22(5);
+        p22(4);
         System.out.println();
         System.out.println();
     }
-
-    
-
 }
