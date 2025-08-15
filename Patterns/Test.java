@@ -55,12 +55,11 @@ class Test {
     }
 
     public static void p7(int n){
-        int space = n-1;
 
         for(int i = 1; i <= n; i++){
 
             //Space
-            for(int j1 = 1; j1 <= space; j1++){
+            for(int j1 = 1; j1 <= (n-i); j1++){
                 System.out.print(" ");
             }
 
@@ -70,11 +69,10 @@ class Test {
             }
 
             //Space
-            for(int j3 = 1; j3 <= space; j3++){
+            for(int j3 = 1; j3 <= (n-i); j3++){
                 System.out.print(" ");
             }
 
-            space--;
             System.out.println();
         }
     }
@@ -103,12 +101,11 @@ class Test {
     }
 
     public static void p9(int n){
-        int space = n-1;
 
         for(int i = 1; i <= n; i++){
 
             //Space
-            for(int j1 = 1; j1 <= space; j1++){
+            for(int j1 = 1; j1 <= n-i; j1++){
                 System.out.print(" ");
             }
 
@@ -118,28 +115,27 @@ class Test {
             }
 
             //Space
-            for(int j3 = 1; j3 <= space; j3++){
+            for(int j3 = 1; j3 <= n-i; j3++){
                 System.out.print(" ");
             }
 
-            space--;
             System.out.println();
         }
 
-        for (int i = 1; i <= n-1; i++){
+        for (int i = 1; i <= n; i++){
             //for space
-            for(int j = 1; j<= (i-1); j++){
+            for(int j2 = 1; j2<= i-1 ; j2++){
                 System.out.print(" ");
             }
 
             //for star
-            for(int star = 1; star <= (2*n - 2*i); star++){
+            for(int star = 1; star <= (2*n + 1- (2*i)); star++){
                 System.out.print("*");
             }
             
 
             //for space
-            for(int j = 1; j<= (i-1); j++){
+            for(int j3 = 1; j3<= i-1; j3++){
                 System.out.print(" ");
             }
             System.out.println();
@@ -154,8 +150,8 @@ class Test {
             System.out.println();
         }
 
-        for(int i = 1; i <= n; i++){
-            for(int j = 1; j<= (n+1 - i); j++){
+        for(int i = 1; i <= n-1; i++){
+            for(int j = 1; j<= (n - i); j++){
                 System.out.print("* ");
             }
             System.out.println();
@@ -179,8 +175,6 @@ class Test {
 
     public static void p12(int n){
 
-        // int space = 2*(n-1);
-
         for(int i = 1; i <= n; i++){
             //Number 
             for(int j = 1; j <= i ; j++){
@@ -198,7 +192,6 @@ class Test {
             }
 
             System.out.println();
-            // space -= 2;
         }
     }
 
